@@ -1,0 +1,293 @@
+*{
+      margin: 0;
+      padding: 0;
+}
+body{
+      font-family: sans-serif;
+      overflow-x: hidden;
+      background: url(../img/freefire_background.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+}
+/* navbar start */
+/* navbar */
+nav{
+    width: 100%;
+    margin: auto;
+    justify-content: space-around;
+    top: 0;
+    line-height: 60px;
+    display: flex;
+    position: sticky;
+    background: rgb(90, 74, 219);
+    z-index: 999;
+}
+.wrapper{
+    width: 100%;
+}
+.logo a img{
+    padding: 0px 10px;
+    float: left;
+    width: 180px;
+    height: 60px;
+    opacity: 1;
+    transition: .3s;
+}
+.logo a img:hover{
+    opacity: .8;
+}
+.menu{
+    float: right;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+nav ul li{
+    float: left;
+}
+nav ul li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #ddd;
+    font-weight: 400;
+    transition: .3s;
+}
+nav ul li a:hover{
+    color: black;
+}
+.login{
+    color: #ddd;
+    transition: .3s;
+}
+.login:hover{
+    background-color: white;
+    border-radius: 3px;
+    padding: 2px 5px;
+    color: black;
+}
+
+/* humberger */
+.humberger{
+    display: none;
+    margin: 15px;
+    right: 0;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: relative;
+}
+.humberger span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    border-radius: 5px;
+    transition: .3s;
+}
+/* navbar end */
+
+/* testimoni start */
+.testimoni{
+      width: 100%;
+      overflow: hidden;
+}
+.content{
+      width: 500px;
+      height: 90.8vh;
+      margin: auto;
+      background-color: #eee;
+}
+.title-testimoni{
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      color: black;
+      padding: 10px 0 0 0;
+}
+.image-testimoni{
+      width: auto;
+}
+/* slide */
+.slider{
+      margin: auto;
+      margin-top: 10px;
+      width: 100px;
+      height: 250px;
+      border-radius: 3px;
+      overflow: hidden;
+  }
+  .slides{
+      width: 500%;
+      height: 250px;
+      display: flex;
+  }
+  .slides input{
+      display: none;
+  }
+  .slide{
+      width: 20%;
+      transition: 2s;
+  }
+  .slide img{
+      width: 100px;
+      height: 250px;
+  }
+  /* slider manual */
+  .navigation-manual,
+  .navigation-auto{
+      position: absolute;
+      top: 350px;
+      width: 100px;
+      display: flex;
+      justify-content: center;
+  }
+  .manual-btn,
+  .navigation-auto div{
+      border: 1px solid rgb(90, 74, 219);
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+  }
+  .manual-btn:not(:last-child),
+  .navigation-auto div:not(:last-child){
+      margin-right: 20px;
+  }
+  .manual-btn:hover{
+      background-color: rgb(90, 74, 219);
+  }
+  #radio1:checked ~ .first{
+      margin-left: 0;
+  }
+  #radio2:checked ~ .first{
+      margin-left: -20%;
+  }
+  #radio3:checked ~ .first{
+      margin-left: -40%;
+  }
+  /* slider manual end */
+  /* slider auto start */
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+      background-color: rgb(90, 74, 219);
+  }
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+      background-color: rgb(90, 74, 219);
+  }
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+      background-color: rgb(90, 74, 219);
+  }
+  /* slider auto end */
+  /* slide end */
+.komentar-testimoni{
+    float: left;
+    width: 100%;
+    height: 40vh;
+}
+.komentarnya{
+    height: 100%;
+    overflow: auto;
+    padding-right: 50px;
+    z-index: -5;
+}
+.content-komentar{
+    display: flex;
+    margin: 10px 0 0 20px;
+    width: auto;
+}
+.avatar-komentar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.content-isi{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+.nama{
+    font-size: 15px;
+    font-weight: none;
+    text-transform: uppercase;
+    color: black;
+}
+.isi-komentar{
+    color: gray;
+}
+form{
+    display: flex;
+    position: fixed;
+    width: 500px;
+    background-color: #ddd;
+    bottom: 0;
+}
+input{
+    width: 90%;
+    padding: 5px;
+    outline: none;
+    border: none;
+}
+.img-kirim{
+    width: 25px;
+    height: 25px;
+}
+button{
+    width: 10%;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/* testimoni end */
+
+/* responsif */
+@media screen and (max-width:1220px){
+    .logo a{
+          font-size: 1.8rem;
+    }
+    nav ul li a{
+          font-size: .7rem;
+    }
+}
+
+@media screen and (max-width:576px){
+    nav ul{
+          flex-direction: column;
+          right: 0;
+          z-index: -2;
+          position: absolute;
+          margin-top: 45px;
+          width: 100%;
+          text-align: center;
+          transform: translateX(100%);
+          border-radius: 0 0 8px 8px;
+          background-color: rgb(90, 74, 219);
+          transition: all 1s;
+          opacity: 0;
+    }
+    nav ul.geser{
+          transform: translateX(0);
+          opacity: 1;
+    }
+    .humberger.geser span:nth-child(1){
+          transform: translateY(8px) rotate(45deg);
+    }
+    .humberger.geser span:nth-child(3){
+          transform: translateY(-8px) rotate(-45deg);
+    }
+    .humberger.geser span:nth-child(2){
+          transform: scale(0);
+    }
+    .humberger{
+          display: flex;
+          float: right;
+    }
+}

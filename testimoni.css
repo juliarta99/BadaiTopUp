@@ -1,0 +1,262 @@
+*{
+      margin: 0;
+      padding: 0;
+}
+  
+body{
+      font-family: sans-serif;
+      overflow-x: hidden;
+}
+  
+/* navbar */
+nav{
+      width: 100%;
+      margin: auto;
+      justify-content: space-around;
+      top: 0;
+      line-height: 60px;
+      display: flex;
+      position: sticky;
+      background: rgb(90, 74, 219);
+      z-index: 999;
+}
+.wrapper{
+      width: 100%;
+}
+.logo a img{
+      padding: 0px 10px;
+      float: left;
+      width: 180px;
+      height: 60px;
+      opacity: 1;
+      transition: .3s;
+}
+.logo a img:hover{
+      opacity: .8;
+}
+.menu{
+      float: right;
+}
+nav ul{
+      list-style-type: none;
+      display: flex;
+}
+ nav ul li{
+      float: left;
+}
+nav ul li a{
+      text-decoration: none;
+      margin: 0px 10px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: #ddd;
+      font-weight: 400;
+      transition: .3s;
+}
+nav ul li a:hover{
+      color: black;
+}
+.login{
+      color: #ddd;
+      transition: .3s;
+}
+.login:hover{
+      background-color: white;
+      border-radius: 3px;
+      padding: 2px 5px;
+      color: black;
+}
+/* navbar end */
+
+/* content testimoni */
+.testimoni{
+      width: 100%;
+      margin: 20px 0;
+      padding: 0 20px;
+      height: auto;
+}
+.title_testimoni{
+      font-size: 30px;
+      text-align: center;
+      justify-content: center;
+      text-transform: uppercase;
+}
+.content_testimoni{
+      padding: 10px;
+}
+.isi_testimoni{
+      display: flex;
+      flex-direction: column;
+      float: left;
+      margin: 20px 3%;
+      position: relative;
+}
+.img_testimoni{
+      width: 185px;
+      height: 400px;
+      border-radius: 10px;
+      opacity: 1;
+      transition: 2s all;
+}
+.nama_testimoni{
+      font-size: 1rem;
+      color: gray;
+      cursor: pointer;
+      text-align: center;
+      text-transform: uppercase;
+}
+.selengkapnya{
+      display: block;
+      position: absolute;
+      top: 0;
+      font-size: 15px;
+      background-color: gray;
+      height: 200px;
+      opacity: 0;
+      padding-top: 200px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 2s all;
+}
+.isi_testimoni:hover .selengkapnya{
+      opacity: .7;
+}
+.isi_testimoni:hover .img_testimoni{
+      opacity: .7;
+}
+/* testimoni end */
+  
+/* humberger */
+.humberger{
+      display: none;
+      margin: 15px;
+      right: 0;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 20px;
+      position: relative;
+}
+.humberger span{
+      display: block;
+      width: 28px;
+      height: 3px;
+      background-color: black;
+      border-radius: 5px;
+      transition: .3s;
+}
+/* footer contact */
+#contact{
+      width: 100%;
+      position: relative;
+      margin: auto;
+      display: flex;
+      background: rgb(90, 74, 219);
+}
+.footer_content{
+      margin: auto;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+}
+a{
+      text-decoration: none;
+}
+i{
+      font-size: .8rem;
+      color: gray;
+      opacity: .7;
+      transition: .3s;
+}
+i:hover{
+      opacity: 1;
+}
+h3{
+      font-size: 1.5rem;
+      color: #ddd;
+}
+.social_media ul{
+      list-style-type: none;
+      display: flex;
+      margin: 20px 10px 3px 10px;
+      justify-content: center;
+      align-items: center;
+}
+.social_media ul li a{
+      margin: 0 5px;
+      display: flex;
+      text-decoration: none;
+}
+.img_social{
+      width: 30px;
+      height: 30px;
+      opacity: .8;
+      transition: .3s;
+}
+.img_social:hover{
+      opacity: 1;
+      width: 35px;
+      height: 35px;
+}
+.alamat{
+      color: #ddd;
+      opacity: .8;
+      transition: .3s;
+}
+.alamat:hover{
+      opacity: .5;
+}
+.copyright{
+      margin-top: 25px;
+      margin-bottom: 5px;
+      position: relative;
+      color: #ddd;
+      font-size: .7rem;
+}
+  /* contact end */
+
+/* responsif */
+@media screen and (max-width:1220px){
+      .logo a{
+            font-size: 1.8rem;
+      }
+      nav ul li a{
+            font-size: .7rem;
+      }
+  }
+  
+@media screen and (max-width:576px){
+      nav ul{
+            flex-direction: column;
+            right: 0;
+            z-index: -2;
+            position: absolute;
+            margin-top: 45px;
+            width: 100%;
+            text-align: center;
+            transform: translateX(100%);
+            border-radius: 0 0 8px 8px;
+            background-color: rgb(90, 74, 219);
+            transition: all 1s;
+            opacity: 0;
+      }
+      nav ul.geser{
+            transform: translateX(0);
+            opacity: 1;
+      }
+      .humberger.geser span:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+      }
+      .humberger.geser span:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+      }
+      .humberger.geser span:nth-child(2){
+            transform: scale(0);
+      }
+      .humberger{
+            display: flex;
+            float: right;
+      }
+}
